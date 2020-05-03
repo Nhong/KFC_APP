@@ -24,7 +24,25 @@ class RegisterTableViewController: UITableViewController {
     }
     
     @IBAction func eyePasswordButtonTapped(_ sender: Any) {
-        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+        updateIsSecureTextEntry()
+        updateEyePasswrodButton()
+    }
+    
+    private func updateEyePasswrodButton() {
+        eyePasswordButton.setImage(
+            eyePasswordImage(
+                isSecureTextEntry: passwordTextField.isSecureTextEntry),
+            for: .normal)
+    }
+    
+    private func eyePasswordImage(isSecureTextEntry: Bool) -> UIImage? {
+        return isSecureTextEntry
+            ? UIImage(named: "button_eye") : UIImage(named: "button_eye_close")
+    }
+    
+    private func updateIsSecureTextEntry() {
+        passwordTextField.isSecureTextEntry
+            = !passwordTextField.isSecureTextEntry
     }
     
 }

@@ -57,7 +57,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yoG-7g-oOd" kind="show" id="VbX-db-9PN"/>
+                                    <segue destination="yoG-7g-oOd" kind="presentation" id="VbX-db-9PN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Register Table View Controller-->
         <scene sceneID="UKr-TA-5db">
             <objects>
-                <tableViewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="yoG-7g-oOd" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="yoG-7g-oOd" customClass="RegisterTableViewController" customModule="KFC" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qHP-Iw-JXT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,6 +206,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5T-BD-4CS">
                                                             <rect key="frame" x="305" y="0.0" width="18" height="44"/>
                                                             <state key="normal" image="button_eye"/>
+                                                            <connections>
+                                                                <action selector="eyePasswordButtonTapped:" destination="yoG-7g-oOd" eventType="touchUpInside" id="THr-gn-Ukw"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -284,6 +287,9 @@
                                                     <state key="normal" title="Cancel">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="cancelButtonTapped:" destination="yoG-7g-oOd" eventType="touchUpInside" id="iwK-81-Lpr"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -303,6 +309,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="AEL-rX-q07"/>
+                    <connections>
+                        <outlet property="eyePasswordButton" destination="A5T-BD-4CS" id="R4u-ry-yvr"/>
+                        <outlet property="passwordTextField" destination="h3h-Kq-1eM" id="f6T-GR-0UG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxo-Iq-KGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

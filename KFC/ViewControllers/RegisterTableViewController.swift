@@ -10,8 +10,10 @@ import UIKit
 
 class RegisterTableViewController: UITableViewController {
 
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var eyePasswordButton: UIButton!
+    @IBOutlet weak var eyeConfirmPasswordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +26,13 @@ class RegisterTableViewController: UITableViewController {
     }
     
     @IBAction func eyePasswordButtonTapped(_ sender: Any) {
-        updateIsSecureTextEntry()
+        updatePasswordTextFieldIsSecureTextEntry()
         updateEyePasswrodButton()
+    }
+    
+    @IBAction func eyeConfirmPasswordButtonTapped(_ sender: Any) {
+        updateConfirmPasswordTextFieldIsSecureTextEntey()
+        updateEyeConfirmPasswordButton()
     }
     
     private func updateEyePasswrodButton() {
@@ -35,14 +42,25 @@ class RegisterTableViewController: UITableViewController {
             for: .normal)
     }
     
+    private func updateEyeConfirmPasswordButton() {
+        eyeConfirmPasswordButton.setImage(eyePasswordImage(
+            isSecureTextEntry: confirmPasswordTextField.isSecureTextEntry),
+                                          for: .normal)
+    }
+    
     private func eyePasswordImage(isSecureTextEntry: Bool) -> UIImage? {
         return isSecureTextEntry
             ? UIImage(named: "button_eye") : UIImage(named: "button_eye_close")
     }
     
-    private func updateIsSecureTextEntry() {
+    private func updatePasswordTextFieldIsSecureTextEntry() {
         passwordTextField.isSecureTextEntry
             = !passwordTextField.isSecureTextEntry
+    }
+    
+    private func updateConfirmPasswordTextFieldIsSecureTextEntey() {
+        confirmPasswordTextField.isSecureTextEntry
+            = !confirmPasswordTextField.isSecureTextEntry
     }
     
 }

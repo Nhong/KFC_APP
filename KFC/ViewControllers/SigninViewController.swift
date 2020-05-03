@@ -19,7 +19,7 @@ final class SigninViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
-        setupData()
+        setupData()        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -73,7 +73,6 @@ extension SigninViewController: UITextFieldDelegate {
 extension SigninViewController: SigninAPIManagerDelegate {
     
     func didSigninCompletion(user: User) {
-        
     }
     
     func didSigninFailure(error: Error) {

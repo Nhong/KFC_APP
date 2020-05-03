@@ -10,15 +10,38 @@ import UIKit
 
 class RegisterTableViewController: UITableViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var confirmEmailTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var eyePasswordButton: UIButton!
     @IBOutlet weak var eyeConfirmPasswordButton: UIButton!
     
+    var registerAPIManager: RegisterAPIManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupData()
     }
     
+    private func setupData() {
+        setupRegisterService()
+    }
+    
+    private func setupRegisterService() {
+        registerAPIManager = RegisterAPIManagerImplementation()
+        registerAPIManager?.setDelegate(self)
+    }
+    
+    @IBAction func registerButtonTapped() {
+        registerAPIManager?.register(optionalName: nameTextField.text,
+                                     optionalEmail: emailTextField.text,
+                                     optionalConfirmEmail: confirmEmailTextField.text,
+                                     optionalPassword: passwordTextField.text,
+                                     optionalConfirmPassword: confirmPasswordTextField.text)
+    }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         dismiss(animated: true,
@@ -61,6 +84,44 @@ class RegisterTableViewController: UITableViewController {
     private func updateConfirmPasswordTextFieldIsSecureTextEntey() {
         confirmPasswordTextField.isSecureTextEntry
             = !confirmPasswordTextField.isSecureTextEntry
+    }
+    
+}
+
+extension RegisterTableViewController: RegisterAPIManagerDelegate {
+    
+    func didRegisterCompletion() {
+        let alertController = UIAlertController(title: "Success",
+                                                message: "ลงทะเบียนเสร็จสิ้น",
+                                                preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "Confirm",
+                                          style: .default)
+        { (_) in
+            self.dismiss(animated: true,
+                         completion: nil)
+        }
+        
+        alertController.addAction(confirmAction)
+        
+        present(alertController,
+                animated: true,
+                completion: nil)
+    }
+    
+    func didRegisterFailure(error: Error) {
+        let alertController = UIAlertController(title: "Warning",
+                                                message: ErrorHelper.errorMessage(genernalError: error as! GeneralError),
+                                                preferredStyle: .alert)
+        
+        let confirmAction = UIAlertAction(title: "Confirm",
+                                          style: .cancel,
+                                          handler: nil)
+        
+        alertController.addAction(confirmAction)
+        
+        present(alertController,
+                animated: true,
+                completion: nil)
     }
     
 }

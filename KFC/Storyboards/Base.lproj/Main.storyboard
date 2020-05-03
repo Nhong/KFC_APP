@@ -267,6 +267,9 @@
                                                     <state key="normal" title="Register">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="registerButtonTapped" destination="yoG-7g-oOd" eventType="touchUpInside" id="a0M-dU-HtM"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -313,9 +316,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="AEL-rX-q07"/>
                     <connections>
+                        <outlet property="confirmEmailTextField" destination="QSU-As-5l5" id="VCc-cl-jrq"/>
                         <outlet property="confirmPasswordTextField" destination="FES-sz-xcZ" id="xoG-t1-G5w"/>
+                        <outlet property="emailTextField" destination="jKP-7v-f4i" id="tQt-o0-eM1"/>
                         <outlet property="eyeConfirmPasswordButton" destination="EdF-xj-cui" id="rbt-bW-idJ"/>
                         <outlet property="eyePasswordButton" destination="A5T-BD-4CS" id="R4u-ry-yvr"/>
+                        <outlet property="nameTextField" destination="TIB-cB-wyY" id="dJO-SE-huk"/>
                         <outlet property="passwordTextField" destination="h3h-Kq-1eM" id="f6T-GR-0UG"/>
                     </connections>
                 </tableViewController>

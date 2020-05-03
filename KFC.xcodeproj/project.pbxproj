@@ -27,6 +27,10 @@
 		3C870238244C30040071D78D /* KFCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C870237244C30040071D78D /* KFCTests.swift */; };
 		3CB8934D245EACDC00CF44C8 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8934C245EACDC00CF44C8 /* RegisterTableViewController.swift */; };
 		3CB8934E245EACDC00CF44C8 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8934C245EACDC00CF44C8 /* RegisterTableViewController.swift */; };
+		3CB89352245EB59A00CF44C8 /* RegisterAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB89351245EB59A00CF44C8 /* RegisterAPIManager.swift */; };
+		3CB89353245EB59A00CF44C8 /* RegisterAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB89351245EB59A00CF44C8 /* RegisterAPIManager.swift */; };
+		3CB89355245EB5A900CF44C8 /* RegisterAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB89354245EB5A900CF44C8 /* RegisterAPIClient.swift */; };
+		3CB89356245EB5A900CF44C8 /* RegisterAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB89354245EB5A900CF44C8 /* RegisterAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,8 @@
 		3C870237244C30040071D78D /* KFCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCTests.swift; sourceTree = "<group>"; };
 		3C870239244C30040071D78D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB8934C245EACDC00CF44C8 /* RegisterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
+		3CB89351245EB59A00CF44C8 /* RegisterAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAPIManager.swift; sourceTree = "<group>"; };
+		3CB89354245EB5A900CF44C8 /* RegisterAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +95,8 @@
 		3C4D066024556E5D004AE9B8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				3C4D066124556E7E004AE9B8 /* SigninAPIManager.swift */,
-				3C4D066424556E8C004AE9B8 /* SigninAPIClient.swift */,
+				3CB89350245EB58100CF44C8 /* Register */,
+				3CB8934F245EB57400CF44C8 /* Signin */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -170,6 +176,24 @@
 				3C870226244C30030071D78D /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3CB8934F245EB57400CF44C8 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				3C4D066124556E7E004AE9B8 /* SigninAPIManager.swift */,
+				3C4D066424556E8C004AE9B8 /* SigninAPIClient.swift */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
+		3CB89350245EB58100CF44C8 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				3CB89351245EB59A00CF44C8 /* RegisterAPIManager.swift */,
+				3CB89354245EB5A900CF44C8 /* RegisterAPIClient.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,10 +300,12 @@
 				3C870221244C30030071D78D /* AppDelegate.swift in Sources */,
 				3C4D06692455700C004AE9B8 /* MockData.swift in Sources */,
 				3C4D066524556E8C004AE9B8 /* SigninAPIClient.swift in Sources */,
+				3CB89355245EB5A900CF44C8 /* RegisterAPIClient.swift in Sources */,
 				3C870223244C30030071D78D /* SceneDelegate.swift in Sources */,
 				3C4D066224556E7E004AE9B8 /* SigninAPIManager.swift in Sources */,
 				3C4D065E24556D3F004AE9B8 /* SigninViewController.swift in Sources */,
 				3C4D067124557385004AE9B8 /* ErrorHelper.swift in Sources */,
+				3CB89352245EB59A00CF44C8 /* RegisterAPIManager.swift in Sources */,
 				3CB8934D245EACDC00CF44C8 /* RegisterTableViewController.swift in Sources */,
 				3C4D066D2455703D004AE9B8 /* User.swift in Sources */,
 			);
@@ -289,12 +315,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB89356245EB5A900CF44C8 /* RegisterAPIClient.swift in Sources */,
 				3CB8934E245EACDC00CF44C8 /* RegisterTableViewController.swift in Sources */,
 				3C4D066324556E7E004AE9B8 /* SigninAPIManager.swift in Sources */,
 				3C4D066624556E8C004AE9B8 /* SigninAPIClient.swift in Sources */,
 				3C4D066E2455703D004AE9B8 /* User.swift in Sources */,
 				3C4D065F24556D3F004AE9B8 /* SigninViewController.swift in Sources */,
 				3C4D067224557385004AE9B8 /* ErrorHelper.swift in Sources */,
+				3CB89353245EB59A00CF44C8 /* RegisterAPIManager.swift in Sources */,
 				3C870238244C30040071D78D /* KFCTests.swift in Sources */,
 				3C4D066A2455700C004AE9B8 /* MockData.swift in Sources */,
 			);

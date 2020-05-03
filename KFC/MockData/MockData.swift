@@ -8,6 +8,6 @@
 
 import Foundation
 
-let users: [User] = [User(name: "ประยุทธ ทองดี",
+var users: [User] = [User(name: "ประยุทธ ทองดี",
                           email: "prayut_c@gmail.com",
                           password: "1234")]

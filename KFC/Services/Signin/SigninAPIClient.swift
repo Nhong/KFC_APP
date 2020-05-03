@@ -26,7 +26,7 @@ final class SigninAPIClientImplementation: SigninAPIClient {
         }
         
         guard let password = optionalPassword else {
-            completion(nil, GeneralError.PasswordIInvalid)
+            completion(nil, GeneralError.PasswordInvalid)
             return
         }
         

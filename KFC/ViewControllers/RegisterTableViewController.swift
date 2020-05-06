@@ -23,7 +23,22 @@ class RegisterTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
         setupData()
+    }
+    
+    private func setupView() {
+        setupTextFields()
+    }
+    
+    private func setupTextFields() {
+        let textFields = [nameTextField,
+        emailTextField,
+        confirmEmailTextField,
+        passwordTextField,
+        confirmPasswordTextField]
+        
+        textFields.forEach{ $0?.delegate = self }
     }
     
     private func setupData() {
@@ -122,6 +137,28 @@ extension RegisterTableViewController: RegisterAPIManagerDelegate {
         present(alertController,
                 animated: true,
                 completion: nil)
+    }
+    
+}
+
+extension RegisterTableViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == nameTextField {
+            emailTextField.becomeFirstResponder()
+        } else if textField == emailTextField {
+            confirmEmailTextField.becomeFirstResponder()
+        } else if textField == confirmEmailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            confirmPasswordTextField.becomeFirstResponder()
+        } else if textField == confirmPasswordTextField {
+            confirmPasswordTextField.resignFirstResponder()
+
+            registerButtonTapped()
+        }
+        
+        return true
     }
     
 }

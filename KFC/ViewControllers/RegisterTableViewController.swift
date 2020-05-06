@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterTableViewController: UITableViewController {
+final class RegisterTableViewController: UITableViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!

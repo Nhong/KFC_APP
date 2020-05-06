@@ -11,6 +11,7 @@ import Foundation
 enum GeneralError: Error {
     case EmailInValid
     case EmailInValidWhenRegister
+    case EmailInvalidAtForgotPassword
     case ConfirmEmailInvalid
     case PasswordInvalid
     case PasswordInValidWhenRegister
@@ -30,7 +31,8 @@ final class ErrorHelper {
              .PasswordInvalid,
              .CannotFoundUser:
             return "ข้อมูล Email หรือ Password ของท่านไม่ถูกต้อง, กรุณาลองใหม่อีกครั้ง"
-        case .EmailInValidWhenRegister:
+        case .EmailInValidWhenRegister,
+             .EmailInvalidAtForgotPassword:
             return "ข้อมูล Email ไม่ถูกต้อง, กรุณาลองใหม่อีกครั้ง"
         case .ConfirmEmailInvalid:
             return "ข้อมูล Confirm Email ไม่ถูกต้อง, กรุณาลองใหม่อีกครั้ง"

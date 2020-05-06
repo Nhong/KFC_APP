@@ -25,6 +25,12 @@
 		3C87022A244C30040071D78D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C870229244C30040071D78D /* Assets.xcassets */; };
 		3C87022D244C30040071D78D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C87022B244C30040071D78D /* LaunchScreen.storyboard */; };
 		3C870238244C30040071D78D /* KFCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C870237244C30040071D78D /* KFCTests.swift */; };
+		3C981C6C2462A964008AE273 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C6B2462A963008AE273 /* ForgotPasswordViewController.swift */; };
+		3C981C6D2462A964008AE273 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C6B2462A963008AE273 /* ForgotPasswordViewController.swift */; };
+		3C981C702462A9AD008AE273 /* ForgotPasswordAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C6F2462A9AD008AE273 /* ForgotPasswordAPIManager.swift */; };
+		3C981C712462A9AD008AE273 /* ForgotPasswordAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C6F2462A9AD008AE273 /* ForgotPasswordAPIManager.swift */; };
+		3C981C732462A9BB008AE273 /* ForgotPasswordAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C722462A9BB008AE273 /* ForgotPasswordAPIClient.swift */; };
+		3C981C742462A9BB008AE273 /* ForgotPasswordAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C722462A9BB008AE273 /* ForgotPasswordAPIClient.swift */; };
 		3CB8934D245EACDC00CF44C8 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8934C245EACDC00CF44C8 /* RegisterTableViewController.swift */; };
 		3CB8934E245EACDC00CF44C8 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8934C245EACDC00CF44C8 /* RegisterTableViewController.swift */; };
 		3CB89352245EB59A00CF44C8 /* RegisterAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB89351245EB59A00CF44C8 /* RegisterAPIManager.swift */; };
@@ -60,6 +66,9 @@
 		3C870233244C30040071D78D /* KFCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KFCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C870237244C30040071D78D /* KFCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCTests.swift; sourceTree = "<group>"; };
 		3C870239244C30040071D78D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C981C6B2462A963008AE273 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		3C981C6F2462A9AD008AE273 /* ForgotPasswordAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordAPIManager.swift; sourceTree = "<group>"; };
+		3C981C722462A9BB008AE273 /* ForgotPasswordAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordAPIClient.swift; sourceTree = "<group>"; };
 		3CB8934C245EACDC00CF44C8 /* RegisterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
 		3CB89351245EB59A00CF44C8 /* RegisterAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAPIManager.swift; sourceTree = "<group>"; };
 		3CB89354245EB5A900CF44C8 /* RegisterAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAPIClient.swift; sourceTree = "<group>"; };
@@ -88,6 +97,7 @@
 			children = (
 				3C4D065D24556D3F004AE9B8 /* SigninViewController.swift */,
 				3CB8934C245EACDC00CF44C8 /* RegisterTableViewController.swift */,
+				3C981C6B2462A963008AE273 /* ForgotPasswordViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -95,6 +105,7 @@
 		3C4D066024556E5D004AE9B8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3C981C6E2462A993008AE273 /* ForgotPassword */,
 				3CB89350245EB58100CF44C8 /* Register */,
 				3CB8934F245EB57400CF44C8 /* Signin */,
 			);
@@ -176,6 +187,15 @@
 				3C870226244C30030071D78D /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3C981C6E2462A993008AE273 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				3C981C6F2462A9AD008AE273 /* ForgotPasswordAPIManager.swift */,
+				3C981C722462A9BB008AE273 /* ForgotPasswordAPIClient.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		3CB8934F245EB57400CF44C8 /* Signin */ = {
@@ -298,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C870221244C30030071D78D /* AppDelegate.swift in Sources */,
+				3C981C732462A9BB008AE273 /* ForgotPasswordAPIClient.swift in Sources */,
 				3C4D06692455700C004AE9B8 /* MockData.swift in Sources */,
 				3C4D066524556E8C004AE9B8 /* SigninAPIClient.swift in Sources */,
 				3CB89355245EB5A900CF44C8 /* RegisterAPIClient.swift in Sources */,
@@ -305,6 +326,8 @@
 				3C4D066224556E7E004AE9B8 /* SigninAPIManager.swift in Sources */,
 				3C4D065E24556D3F004AE9B8 /* SigninViewController.swift in Sources */,
 				3C4D067124557385004AE9B8 /* ErrorHelper.swift in Sources */,
+				3C981C702462A9AD008AE273 /* ForgotPasswordAPIManager.swift in Sources */,
+				3C981C6C2462A964008AE273 /* ForgotPasswordViewController.swift in Sources */,
 				3CB89352245EB59A00CF44C8 /* RegisterAPIManager.swift in Sources */,
 				3CB8934D245EACDC00CF44C8 /* RegisterTableViewController.swift in Sources */,
 				3C4D066D2455703D004AE9B8 /* User.swift in Sources */,
@@ -317,13 +340,16 @@
 			files = (
 				3CB89356245EB5A900CF44C8 /* RegisterAPIClient.swift in Sources */,
 				3CB8934E245EACDC00CF44C8 /* RegisterTableViewController.swift in Sources */,
+				3C981C6D2462A964008AE273 /* ForgotPasswordViewController.swift in Sources */,
 				3C4D066324556E7E004AE9B8 /* SigninAPIManager.swift in Sources */,
+				3C981C742462A9BB008AE273 /* ForgotPasswordAPIClient.swift in Sources */,
 				3C4D066624556E8C004AE9B8 /* SigninAPIClient.swift in Sources */,
 				3C4D066E2455703D004AE9B8 /* User.swift in Sources */,
 				3C4D065F24556D3F004AE9B8 /* SigninViewController.swift in Sources */,
 				3C4D067224557385004AE9B8 /* ErrorHelper.swift in Sources */,
 				3CB89353245EB59A00CF44C8 /* RegisterAPIManager.swift in Sources */,
 				3C870238244C30040071D78D /* KFCTests.swift in Sources */,
+				3C981C712462A9AD008AE273 /* ForgotPasswordAPIManager.swift in Sources */,
 				3C4D066A2455700C004AE9B8 /* MockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

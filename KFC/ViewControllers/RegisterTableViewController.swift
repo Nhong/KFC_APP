@@ -27,8 +27,26 @@ class RegisterTableViewController: UITableViewController {
         setupData()
     }
     
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        tableView.endEditing(true)
+    }
+    
+    
     private func setupView() {
         setupTextFields()
+        setupGesture()
+    }
+    
+    private func setupGesture() {
+        let tapGesture: UITapGestureRecognizer
+            = UITapGestureRecognizer(target: self,
+                                     action: #selector(hideKeyboards))
+        
+        tableView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func hideKeyboards() {
+        tableView.endEditing(true)
     }
     
     private func setupTextFields() {

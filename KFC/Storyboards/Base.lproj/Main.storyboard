@@ -89,6 +89,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="Nc8-wQ-5mW" id="tvv-ys-wZL"/>
                         <outlet property="passwordTextField" destination="1ml-xY-YeC" id="Yue-c0-maB"/>
+                        <segue destination="wQC-KA-caP" kind="presentation" identifier="SigninCompletedIdentifier" id="xQN-aM-M6z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -331,6 +332,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxo-Iq-KGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="949.60000000000002" y="138.98050974512745"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="UgX-4V-SYc">
+            <objects>
+                <viewController id="JYM-ga-G8r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="chn-pF-eeO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="u7e-x2-1Kw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="oC1-BH-gpm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Lw-Xy-sZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1945" y="-220"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="wbI-lA-QMF">
+            <objects>
+                <viewController id="k12-L1-13w" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yUR-3F-RRe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TJD-5f-mff"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Szv-nw-y8c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vob-3L-oGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1945" y="-886"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zX0-RV-1y8">
+            <objects>
+                <tabBarController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="wQC-KA-caP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="62c-J5-g2J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="k12-L1-13w" kind="relationship" relationship="viewControllers" id="d4u-aw-acH"/>
+                        <segue destination="JYM-ga-G8r" kind="relationship" relationship="viewControllers" id="TsI-Y5-C1h"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7En-2O-Ek9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950" y="-555"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="HtW-eX-kGu">

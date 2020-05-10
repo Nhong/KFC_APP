@@ -73,18 +73,8 @@ extension SigninViewController: UITextFieldDelegate {
 extension SigninViewController: SigninAPIManagerDelegate {
     
     func didSigninCompletion(user: User) {
-        let alertController = UIAlertController(title: "Success",
-                                                message: "เข้าสู่ระบบเสร็จสิ้น",
-                                                preferredStyle: .alert)
-        let confirmAction = UIAlertAction(title: "Confirm",
-                                          style: .default,
-                                          handler: nil)
-        
-        alertController.addAction(confirmAction)
-        
-        present(alertController,
-                animated: true,
-                completion: nil)
+       performSegue(withIdentifier: "SigninCompletedIdentifier",
+                    sender: nil)
     }
     
     func didSigninFailure(error: Error) {

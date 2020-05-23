@@ -12,6 +12,7 @@ class MenuTableViewCell: UITableViewCell {
 
     @IBOutlet weak var contentImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,9 +20,11 @@ class MenuTableViewCell: UITableViewCell {
     }
 
     func configure(imageName: String,
-                   title: String) {
+                   title: String,
+                   price: Int) {
         contentImageView.image = UIImage(named: imageName)
         titleLabel.text = title
+        priceLabel.text = "\(price) บาท"
     }
     
 }

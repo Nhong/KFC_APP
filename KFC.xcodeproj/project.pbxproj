@@ -39,6 +39,8 @@
 		3C981C712462A9AD008AE273 /* ForgotPasswordAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C6F2462A9AD008AE273 /* ForgotPasswordAPIManager.swift */; };
 		3C981C732462A9BB008AE273 /* ForgotPasswordAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C722462A9BB008AE273 /* ForgotPasswordAPIClient.swift */; };
 		3C981C742462A9BB008AE273 /* ForgotPasswordAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C722462A9BB008AE273 /* ForgotPasswordAPIClient.swift */; };
+		3CA3ED4624790BBE0023EBCD /* MenuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3ED4524790BBE0023EBCD /* MenuDetailViewController.swift */; };
+		3CA3ED4724790BBE0023EBCD /* MenuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3ED4524790BBE0023EBCD /* MenuDetailViewController.swift */; };
 		3CB8934D245EACDC00CF44C8 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8934C245EACDC00CF44C8 /* RegisterTableViewController.swift */; };
 		3CB8934E245EACDC00CF44C8 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8934C245EACDC00CF44C8 /* RegisterTableViewController.swift */; };
 		3CB89352245EB59A00CF44C8 /* RegisterAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB89351245EB59A00CF44C8 /* RegisterAPIManager.swift */; };
@@ -85,6 +87,7 @@
 		3C981C6B2462A963008AE273 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		3C981C6F2462A9AD008AE273 /* ForgotPasswordAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordAPIManager.swift; sourceTree = "<group>"; };
 		3C981C722462A9BB008AE273 /* ForgotPasswordAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordAPIClient.swift; sourceTree = "<group>"; };
+		3CA3ED4524790BBE0023EBCD /* MenuDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewController.swift; sourceTree = "<group>"; };
 		3CB8934C245EACDC00CF44C8 /* RegisterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
 		3CB89351245EB59A00CF44C8 /* RegisterAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAPIManager.swift; sourceTree = "<group>"; };
 		3CB89354245EB5A900CF44C8 /* RegisterAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAPIClient.swift; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 		3C4D065C24556CD7004AE9B8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3CA3ED4424790B960023EBCD /* MenuDetail */,
 				3C1C42992467F08900E7F20C /* Home */,
 				3C1C42A32467FACE00E7F20C /* Views */,
 				3C4D065D24556D3F004AE9B8 /* SigninViewController.swift */,
@@ -236,6 +240,14 @@
 				3C981C722462A9BB008AE273 /* ForgotPasswordAPIClient.swift */,
 			);
 			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		3CA3ED4424790B960023EBCD /* MenuDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3CA3ED4524790BBE0023EBCD /* MenuDetailViewController.swift */,
+			);
+			path = MenuDetail;
 			sourceTree = "<group>";
 		};
 		3CB8934F245EB57400CF44C8 /* Signin */ = {
@@ -369,6 +381,7 @@
 				3C4D067124557385004AE9B8 /* ErrorHelper.swift in Sources */,
 				3C1C429B2467F0B800E7F20C /* HomeTableViewController.swift in Sources */,
 				3C981C702462A9AD008AE273 /* ForgotPasswordAPIManager.swift in Sources */,
+				3CA3ED4624790BBE0023EBCD /* MenuDetailViewController.swift in Sources */,
 				3C1C42A12467F30F00E7F20C /* Promotion.swift in Sources */,
 				3C981C6C2462A964008AE273 /* ForgotPasswordViewController.swift in Sources */,
 				3CF782D32467FD4B0079BD92 /* MenuTableViewCell.swift in Sources */,
@@ -400,6 +413,7 @@
 				3CB89353245EB59A00CF44C8 /* RegisterAPIManager.swift in Sources */,
 				3C870238244C30040071D78D /* KFCTests.swift in Sources */,
 				3C1C42A62467FAE800E7F20C /* PromotionTableViewCell.swift in Sources */,
+				3CA3ED4724790BBE0023EBCD /* MenuDetailViewController.swift in Sources */,
 				3C981C712462A9AD008AE273 /* ForgotPasswordAPIManager.swift in Sources */,
 				3CF782D12467FC6F0079BD92 /* TitleTableViewCell.swift in Sources */,
 				3C4D066A2455700C004AE9B8 /* MockData.swift in Sources */,

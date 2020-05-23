@@ -10,15 +10,15 @@ import UIKit
 
 class PromotionTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var promotionImageView: UIImageView!
-    
+    @IBOutlet weak var contentImageView: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
     func configure(imageName: String) {
-        promotionImageView.image = UIImage(named: imageName)
+        contentImageView.image = UIImage(named: imageName)
     }
 
 }

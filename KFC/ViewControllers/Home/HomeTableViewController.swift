@@ -15,9 +15,37 @@ enum Section: Int {
 
 final class HomeTableViewController: UITableViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupView()
+    }
+    
+    private func setupView() {
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        setupTableViewRowHeight()
+    }
+    
+    private func setupTableViewRowHeight() {
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 200.0
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
+        switch segue.destination {
+        case let menuViewController as MenuDetailViewController:
+            menuViewController.setup(menuItem: sender as? MenuItem)
+        default:
+            break
+        }
     }
 
     // MARK: - Table view data source
@@ -72,15 +100,34 @@ final class HomeTableViewController: UITableViewController {
             let menu = menuItems[indexPath.row - 1]
             
             cell.configure(imageName: menu.imageName,
-                           title: menu.name)
+                           title: menu.name,
+                           price: menu.price)
             
             return cell
         }
         
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView,
+                            heightForHeaderInSection section: Int) -> CGFloat {
         return 0.2
+    }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
+        let homeSection = Section(rawValue: indexPath.section)!
+
+        switch homeSection {
+        case .Information:
+            let menu = menuItems[indexPath.row - 1]
+            
+            performSegue(withIdentifier: "MenuDetailIdentifier",
+                         sender: menu)
+        default:
+            break
+        }
     }
 
 }

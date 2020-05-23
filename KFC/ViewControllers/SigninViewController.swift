@@ -19,6 +19,7 @@ final class SigninViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        
         setupData()        
     }
     

@@ -19,3 +19,4 @@ var menuItems: [MenuItem] = [MenuItem(name: "ไก่ไม่มีกระ�
                                       imageName: "menu")]
 var promotion: Promotion = Promotion(name: "ลด แลด แจก แถม",
                                      imageName: "promotion")
+var shoppingCart: ShoppingCart = ShoppingCart()

@@ -23,6 +23,14 @@ class MenuDetailViewController: UIViewController {
         setupView()
     }
     
+    @IBAction func addToShoppingCart(sender: Any?) {
+        guard let menuItem = optionalMenuItem else { return }
+        
+        shoppingCart.addToShoppingCart(item: menuItem)
+        
+        print(shoppingCart.menuItems)
+    }
+    
     private func setupView() {
         setupNavigationBar()
         setupAddToCartButton()

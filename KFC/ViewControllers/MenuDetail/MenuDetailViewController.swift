@@ -28,7 +28,8 @@ class MenuDetailViewController: UIViewController {
         
         shoppingCart.addToShoppingCart(item: menuItem)
         
-        print(shoppingCart.menuItems)
+        NotificationCenter.default.post(name: notificationWhenAddToCartCompletion,
+                                        object: nil)
     }
     
     private func setupView() {

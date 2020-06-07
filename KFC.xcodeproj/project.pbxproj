@@ -27,6 +27,11 @@
 		3C4D066E2455703D004AE9B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D066C2455703D004AE9B8 /* User.swift */; };
 		3C4D067124557385004AE9B8 /* ErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D067024557385004AE9B8 /* ErrorHelper.swift */; };
 		3C4D067224557385004AE9B8 /* ErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D067024557385004AE9B8 /* ErrorHelper.swift */; };
+		3C50CDDA24837A05002CDFA7 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C50CDD924837A05002CDFA7 /* CartTableViewController.swift */; };
+		3C50CDDD24837BFD002CDFA7 /* NotificationConfigulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C50CDDC24837BFD002CDFA7 /* NotificationConfigulator.swift */; };
+		3C50CDDE24837BFD002CDFA7 /* NotificationConfigulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C50CDDC24837BFD002CDFA7 /* NotificationConfigulator.swift */; };
+		3C50CDE024838A9B002CDFA7 /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C50CDDF24838A9B002CDFA7 /* CartItemTableViewCell.swift */; };
+		3C50CDE124838A9B002CDFA7 /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C50CDDF24838A9B002CDFA7 /* CartItemTableViewCell.swift */; };
 		3C870221244C30030071D78D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C870220244C30030071D78D /* AppDelegate.swift */; };
 		3C870223244C30030071D78D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C870222244C30030071D78D /* SceneDelegate.swift */; };
 		3C870228244C30030071D78D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C870226244C30030071D78D /* Main.storyboard */; };
@@ -76,6 +81,9 @@
 		3C4D06682455700C004AE9B8 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		3C4D066C2455703D004AE9B8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3C4D067024557385004AE9B8 /* ErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHelper.swift; sourceTree = "<group>"; };
+		3C50CDD924837A05002CDFA7 /* CartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
+		3C50CDDC24837BFD002CDFA7 /* NotificationConfigulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConfigulator.swift; sourceTree = "<group>"; };
+		3C50CDDF24838A9B002CDFA7 /* CartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemTableViewCell.swift; sourceTree = "<group>"; };
 		3C87021D244C30030071D78D /* KFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C870220244C30030071D78D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C870222244C30030071D78D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +138,7 @@
 				3C1C42A42467FAE800E7F20C /* PromotionTableViewCell.swift */,
 				3CF782CF2467FC6F0079BD92 /* TitleTableViewCell.swift */,
 				3CF782D22467FD4B0079BD92 /* MenuTableViewCell.swift */,
+				3C50CDDF24838A9B002CDFA7 /* CartItemTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,6 +146,7 @@
 		3C4D065C24556CD7004AE9B8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3C50CDD82483532A002CDFA7 /* Cart */,
 				3CA3ED4424790B960023EBCD /* MenuDetail */,
 				3C1C42992467F08900E7F20C /* Home */,
 				3C1C42A32467FACE00E7F20C /* Views */,
@@ -184,6 +194,22 @@
 			path = ErrorHelper;
 			sourceTree = "<group>";
 		};
+		3C50CDD82483532A002CDFA7 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				3C50CDD924837A05002CDFA7 /* CartTableViewController.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		3C50CDDB24837BCC002CDFA7 /* NotificationConfigulator */ = {
+			isa = PBXGroup;
+			children = (
+				3C50CDDC24837BFD002CDFA7 /* NotificationConfigulator.swift */,
+			);
+			path = NotificationConfigulator;
+			sourceTree = "<group>";
+		};
 		3C870214244C30030071D78D = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +231,7 @@
 		3C87021F244C30030071D78D /* KFC */ = {
 			isa = PBXGroup;
 			children = (
+				3C50CDDB24837BCC002CDFA7 /* NotificationConfigulator */,
 				3C4D066F24557366004AE9B8 /* ErrorHelper */,
 				3C4D066B2455702A004AE9B8 /* Models */,
 				3C4D066724556FF7004AE9B8 /* MockData */,
@@ -386,6 +413,8 @@
 				3C1C429B2467F0B800E7F20C /* HomeTableViewController.swift in Sources */,
 				3C981C702462A9AD008AE273 /* ForgotPasswordAPIManager.swift in Sources */,
 				3CA3ED4624790BBE0023EBCD /* MenuDetailViewController.swift in Sources */,
+				3C50CDDD24837BFD002CDFA7 /* NotificationConfigulator.swift in Sources */,
+				3C50CDE024838A9B002CDFA7 /* CartItemTableViewCell.swift in Sources */,
 				3C1C42A12467F30F00E7F20C /* Promotion.swift in Sources */,
 				3C981C6C2462A964008AE273 /* ForgotPasswordViewController.swift in Sources */,
 				3CA3ED492479170E0023EBCD /* ShoppingCart.swift in Sources */,
@@ -393,6 +422,7 @@
 				3CB89352245EB59A00CF44C8 /* RegisterAPIManager.swift in Sources */,
 				3CF782D02467FC6F0079BD92 /* TitleTableViewCell.swift in Sources */,
 				3C1C429E2467F15600E7F20C /* MenuItem.swift in Sources */,
+				3C50CDDA24837A05002CDFA7 /* CartTableViewController.swift in Sources */,
 				3CB8934D245EACDC00CF44C8 /* RegisterTableViewController.swift in Sources */,
 				3C4D066D2455703D004AE9B8 /* User.swift in Sources */,
 			);
@@ -411,6 +441,7 @@
 				3C981C742462A9BB008AE273 /* ForgotPasswordAPIClient.swift in Sources */,
 				3C4D066624556E8C004AE9B8 /* SigninAPIClient.swift in Sources */,
 				3C4D066E2455703D004AE9B8 /* User.swift in Sources */,
+				3C50CDE124838A9B002CDFA7 /* CartItemTableViewCell.swift in Sources */,
 				3C4D065F24556D3F004AE9B8 /* SigninViewController.swift in Sources */,
 				3CA3ED4A2479170E0023EBCD /* ShoppingCart.swift in Sources */,
 				3C1C429F2467F15600E7F20C /* MenuItem.swift in Sources */,
@@ -419,6 +450,7 @@
 				3CB89353245EB59A00CF44C8 /* RegisterAPIManager.swift in Sources */,
 				3C870238244C30040071D78D /* KFCTests.swift in Sources */,
 				3C1C42A62467FAE800E7F20C /* PromotionTableViewCell.swift in Sources */,
+				3C50CDDE24837BFD002CDFA7 /* NotificationConfigulator.swift in Sources */,
 				3CA3ED4724790BBE0023EBCD /* MenuDetailViewController.swift in Sources */,
 				3C981C712462A9AD008AE273 /* ForgotPasswordAPIManager.swift in Sources */,
 				3CF782D12467FC6F0079BD92 /* TitleTableViewCell.swift in Sources */,

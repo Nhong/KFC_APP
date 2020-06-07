@@ -11,10 +11,12 @@ import Foundation
 var users: [User] = [User(name: "ประยุทธ ทองดี",
                           email: "prayut_c@gmail.com",
                           password: "1234")]
-var menuItems: [MenuItem] = [MenuItem(name: "ไก่ไม่มีกระดูก",
+var menuItems: [MenuItem] = [MenuItem(id: 1,
+                                      name: "ไก่ไม่มีกระดูก",
                                       price: 33,
                                       imageName: "menu"),
-                             MenuItem(name: "ไก่กรอบ",
+                             MenuItem(id: 2,
+                                      name: "ไก่กรอบ",
                                       price: 79,
                                       imageName: "menu")]
 var promotion: Promotion = Promotion(name: "ลด แลด แจก แถม",
